@@ -15,6 +15,8 @@ export default async function exportToExcel(data, setMsg) {
         const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: "array" });
         const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocumnet.spreadsheetml.sheet;charset=UTF-8' });
 
+        console.log(blob)
+
         saveAs(blob, 'data.xlsx')
 
         setMsg({ text: `Data extracted`, type: 'success' });
