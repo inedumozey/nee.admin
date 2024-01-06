@@ -7,8 +7,8 @@ export default function Header() {
         <div className='text-white p-[10px] mb-[0px] md:mb-[30px] font-bold' >
             <div className={`${acme.className} font-bold text-[2rem]`}><span className={sevillana.className}>A</span>rogundade</div>
             <div className='text-center'>
-                <div>Mrs Arogundade of blessed memory</div>
-                <div className='text-[.8rem]'>{"("}12<sup>th</sup> Oct, 1975 - 21<sup>st</sup> Nov, 2023{")"}</div>
+                <div>Mrs Rachel Omoladun Arogundade of blessed memory</div>
+                <div className='text-[.8rem]'>{"("}20<sup>th</sup> Feb, 1957 - 1<sup>st</sup> Jan, 2024{")"}</div>
             </div>
         </div>
     )
