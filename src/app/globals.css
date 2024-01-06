@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/bg1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color-dodge
+}
+
+input {
+  padding: 10px;
+  font-size: .9rem;
+}
+
+textarea{
+  min-height: 50px;
+  max-height: 250px;
+  padding: 10px;
+  font-size: .9rem;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid greenyellow
+}
