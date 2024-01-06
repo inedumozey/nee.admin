@@ -9,7 +9,6 @@ import exportToExcel from "./utils/exportData";
 // axios.defaults.baseURL = 'http://localhost:4000/api/v1';
 axios.defaults.baseURL = 'https://nee-server.onrender.com/api/v1';
 
-
 export default function Home() {
   const [extracting, setExtracting] = useState(false);
   const { snap } = useSnap(.5)
@@ -19,7 +18,7 @@ export default function Home() {
     setExtracting(true)
 
     try {
-      const { data } = await axios.get('/extract-data');
+      const { data } = await axios.get('/');
       exportToExcel(data.data, setMsg)
 
       setExtracting(false)
