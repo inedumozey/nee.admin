@@ -17,7 +17,7 @@ export default async function exportToExcel(data, setMsg) {
 
         saveAs(blob, 'data.xlsx')
 
-        setMsg({ text: `Data exported successfully`, type: 'success' });
+        setMsg({ text: `Data extracted`, type: 'success' });
     }
     catch (e) {
         setMsg({ text: "Error exporting data; try again!", type: 'error' })
