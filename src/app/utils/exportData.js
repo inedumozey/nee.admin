@@ -10,7 +10,7 @@ export default async function exportToExcel(data, setMsg) {
             const worksheet = XLSX.utils.json_to_sheet(data);
             const workbook = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-            XLSX.writeFile(workbook, "DataSheet.xlsx");
+            XLSX.writeFile(workbook, "data.xlsx");
 
             setMsg({ text: `Data extracted`, type: 'success' });
         }
