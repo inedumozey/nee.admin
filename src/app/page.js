@@ -6,8 +6,8 @@ import Header from './components/Header';
 import { useSnap } from '@mozeyinedu/hooks-lab'
 import axios from 'axios';
 import exportToExcel from "./utils/exportData";
-// axios.defaults.baseURL = 'http://localhost:4000/api/v1';
-axios.defaults.baseURL = 'https://nee-server.onrender.com/api/v1';
+axios.defaults.baseURL = 'http://localhost:4000/api/v1';
+// axios.defaults.baseURL = 'https://nee-server.onrender.com/api/v1';
 
 export default function Home() {
   const [extracting, setExtracting] = useState(false);
@@ -18,7 +18,7 @@ export default function Home() {
     setExtracting(true)
 
     try {
-      const { data } = await axios.get('/');
+      const { data } = await axios.get('/data');
       exportToExcel(data.data, setMsg)
 
       setExtracting(false)
