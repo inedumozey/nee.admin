@@ -14,14 +14,14 @@ export default function Home() {
   const [extracting, setExtracting] = useState(false);
   const { snap } = useSnap(.5)
   const [msg, setMsg] = useState({ text: "", type: '' })
-  const [data, setData] = useState([])
 
   const extractData = async () => {
     setExtracting(true)
 
     try {
       const { data } = await axios.get('/extract-data');
-      setData(data.data)
+      exportToExcel(data.data, setMsg)
+
       setExtracting(false)
     }
     catch (e) {
@@ -34,10 +34,6 @@ export default function Home() {
       setExtracting(false)
     }
   }
-
-  useEffect(() => {
-    exportToExcel(data, setMsg)
-  }, [data])
 
   return (
     <div className=''>
